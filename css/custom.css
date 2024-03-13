@@ -44,6 +44,19 @@ nav .form-select {
     font-family: 'ProximaNovaBold';
 }
 
+ul {
+    padding-left: 50px;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    color: #a42650;
+}
+
+
 h1 {
     font-family: 'Playfair Display', serif;
     color: #741E3A;
@@ -84,6 +97,11 @@ p {
     border-color: #a42650;
 }
 
+.btn.btn-primary.active, .btn.btn-primary:active {
+    background-color: #861a3e;
+    border-color: #861a3e;
+}
+
 .btn-outline-primary {
     border-color: #741E3A;
     color: #741E3A;
@@ -94,6 +112,12 @@ p {
 .btn-outline-primary:hover {
     background-color: #741E3A;
     border-color: #741E3A;
+    color: white;
+}
+
+.btn.btn-outline-primary.active, .btn.btn-outline-primary:active {
+    background-color: #a42650;
+    border-color: #a42650;
     color: white;
 }
 
@@ -112,6 +136,12 @@ p {
     font-weight: 600;
 }
 
+.btn.btn-outline-secondary.active, .btn.btn-outline-secondary:active {
+    background-color: rgb(231, 231, 231);
+    border-color: rgb(231, 231, 231);
+    color: #741E3A;
+}
+
 .btn-outline-info {
     border-color: white;
     color: white;
@@ -125,6 +155,12 @@ p {
     background-color: white;
     font-family: 'Playfair Display', serif;
     font-weight: 600;
+}
+
+.btn.btn-outline-info.active, .btn.btn-outline-info:active {
+    background-color: rgb(231, 231, 231);
+    border-color: rgb(231, 231, 231);
+    color: #282F41;
 }
 
 /* Hero Image CSS */
@@ -141,6 +177,10 @@ p {
 
 .align-center {
     text-align: center;
+}
+
+.align-item-center {
+    align-items: center;
 }
 
 .hero-image .row {
@@ -213,6 +253,11 @@ div .card-body {
 }
 
 /* End learn and explore card CSS */
+
+.card-img-top { 
+    border-radius: 0;
+}
+
 .card {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -238,7 +283,7 @@ div .card-body {
 
 .card a:hover {
     color: #212E78;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* End exhibits cards CSS */
