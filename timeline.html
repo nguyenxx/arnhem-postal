@@ -17,7 +17,70 @@
         href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
 
+    <!-- timeline -->
+    <link title="timeline-styles" rel="stylesheet"
+        href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
 </head>
+
+<style>
+    .tl-text h2.tl-headline {
+        color: black !important;
+        text-shadow: none !important;
+        font-family: 'ProximaNovaBold' !important;
+    }
+
+    .tl-full-color-background .tl-text h3.tl-headline-date {
+        color: black !important;
+        text-shadow: none !important;
+        font-family: 'ProximaNovaBold' !important;
+    }
+
+    .tl-full-color-background .tl-text p {
+        color: black !important;
+        text-shadow: none !important;
+        font-family: 'ProximaNova' !important;
+    }
+
+    .tl-timegroup.tl-timegroup-alternate {
+        background-color: #F5CEB3;
+    }
+
+    .tl-timegroup .tl-timegroup-message {
+        text-shadow: none;
+        color: black;
+    }
+
+    .tl-timegroup {
+        background-color: #D4E3E6;
+    }
+
+    .tl-slidenav-previous .tl-slidenav-content-container.tl-slidenav-inverted .tl-slidenav-icon,
+    .tl-slidenav-next .tl-slidenav-content-container.tl-slidenav-inverted .tl-slidenav-icon,
+    .tl-slidenav-previous .tl-slidenav-content-container.tl-slidenav-inverted .tl-slidenav-title,
+    .tl-slidenav-next .tl-slidenav-content-container.tl-slidenav-inverted .tl-slidenav-title,
+    .tl-slidenav-previous .tl-slidenav-content-container.tl-slidenav-inverted .tl-slidenav-description,
+    .tl-slidenav-next .tl-slidenav-content-container.tl-slidenav-inverted .tl-slidenav-description {
+        color: #000000;
+        text-shadow: none;
+    }
+
+    .tl-slide.tl-full-color-background .tl-caption {
+        color: #000000 !important;
+        text-shadow: none !important;
+    }
+
+    .tl-slide.tl-full-color-background a {
+        color: #000000 !important;
+        text-shadow: none !important;
+    }
+
+    /* .tl-timeline h1, .tl-timeline h2, .tl-timeline h3, .tl-timeline h4, .tl-timeline h5, .tl-timeline h6 {
+        font-family: 'ProximaNovaBold' !important;
+    } */
+
+</style>
 
 <body>
     <!-- Navigation -->
@@ -31,7 +94,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">About</a>
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="exhibits.html">Exhibits</a>
@@ -46,7 +109,7 @@
                         <a class="nav-link" href="database.html">Database</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resources</a>
+                        <a class="nav-link" href="resources.html">Resources</a>
                     </li>
                     <select class="form-select" aria-label="language">
                         <option selected><span class="fi fi-gr">English</option>
@@ -65,16 +128,16 @@
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
         </div>
 
     </div>
-    <iframe
-    src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1by_h0BOTLOznb41zDnVZLMfijvqTh6UZ0h3Vc-FIQrM&font=Default&lang=en&initial_zoom=2&height=650'
-    width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+
+    <div id='timeline-embed' style="width: 100%; height: 600px"></div>
 
 
     <!-- footer -->
@@ -84,6 +147,24 @@
             Powered by Django
         </p>
     </footer>
+
+    <script type="text/javascript">
+        // The TL.Timeline constructor takes at least two arguments:
+        // the id of the Timeline container (no '#'), and
+        // the URL to your JSON data file or Google spreadsheet.
+        // the id must refer to an element "above" this code,
+        // and the element must have CSS styling to give it width and height
+        // optionally, a third argument with configuration options can be passed.
+        // See below for more about options.
+        var additionalOptions = {
+            script_path: '/timeline/js/',
+            language: 'en',
+            font: 'amatic-andika'
+        }
+
+        timeline = new TL.Timeline('timeline-embed',
+            'https://docs.google.com/spreadsheets/d/1by_h0BOTLOznb41zDnVZLMfijvqTh6UZ0h3Vc-FIQrM/edit#gid=0');
+    </script>
 
 
 
