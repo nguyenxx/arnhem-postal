@@ -40,6 +40,12 @@ nav .form-select {
     margin-right: 25px;
 }
 
+.nav-tabs .nav-link {
+    color: black;
+    font-size: 14px;
+    font-family: 'ProximaNova';
+}
+
 .bolded {
     font-family: 'ProximaNovaBold';
 }
