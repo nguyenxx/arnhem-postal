@@ -182,6 +182,12 @@ p {
     background-size: cover;
 }
 
+.hero-image-evolution {
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/hero-evolution.png);
+    background-size: cover;
+}
+
 .hero-image img {
     height: 100px;
     margin-top: 20px;
@@ -189,6 +195,10 @@ p {
 
 .align-center {
     text-align: center;
+}
+
+.align-right {
+    text-align: end;
 }
 
 .align-item-center {
@@ -213,6 +223,18 @@ p {
     font-weight: 600;
     margin-bottom: 20px;
     font-size: 25px;
+}
+
+.hero-image-evolution h1 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.hero-image-evolution .row {
+    align-items: center;
+    height: 100%;
 }
 
 /* End Hero Image CSS */
@@ -457,22 +479,6 @@ table .table-secondary {
     font-size: 12px;
 }
 
-/* .db-column .dropdown .btn-secondary {
-    color: gray;
-    background-color: white;
-    font-size: 14px;
-    font-family: 'ProximaNova';
-    border-radius: 0.2rem;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.db-column a.dropdown-item {
-    font-size: 14px;
-    font-family: 'ProximaNova';
-    border-radius: 0.2rem;
-} */
-
 .labelCSS {
     font-family: 'ProximaNova';
     font-size: 14px;
@@ -496,6 +502,64 @@ table .table-secondary {
     border-bottom-left-radius: 0;
     font-size: 14px;
 }
+
+/* individual exhibit pages CSS */
+.add-margin {
+    margin-top: 5%; 
+    margin-left: 5%; 
+    margin-right: 15%;
+}
+
+.remove-margin-bottom {
+    margin-bottom: 0;
+}
+
+.list-group {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.list-group-item {
+    font-size: 14px;
+    font-family: 'ProximaNova';
+    color: #333;
+
+}
+
+.list-group-item.disabled {
+    font-family: 'ProximaNovaBold';
+    color: #868e96;
+}
+
+.list-group-item.active {
+    background-color: #741E3A;
+    border-color: #741E3A;
+}
+
+.dropdown-item:active {
+    background-color: #741E3A;
+}
+
+.figure-caption {
+    color: black; 
+    font-size: 12px; 
+    font-family: 'ProximaNovaBold';
+    margin-top: 5px;
+    text-align: center;
+}
+
+.figure-caption.unbold {
+    font-family: 'ProximaNova';
+}
+
+.alert-info {
+    color: #333;
+    background-color: #efe2db;
+    border-color: #f1bc4e;
+
+}
+
+/* end individual exhibit pages CSS */
 
 
 /* end database page CSS */
@@ -534,6 +598,10 @@ footer {
         font-size: 1.5rem;
     }
 
+    .list-group {
+        width: 250px;
+    }
+
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -568,6 +636,10 @@ footer {
         font-size: 2rem;
     }
 
+    .list-group {
+        width: 150px;
+    }
+
 
 }
 
@@ -596,6 +668,10 @@ footer {
 
     .carousel-caption h1 {
         font-size: 2.5rem;
+    }
+
+    .list-group {
+        width: 200px;
     }
 
 
@@ -627,6 +703,10 @@ footer {
 
     .carousel-caption h1 {
         font-size: 2.5rem;
+    }
+
+    .list-group {
+        width: 250px;
     }
 
 
@@ -800,16 +880,7 @@ h2 {
     border-radius: 0;
 }
 
-.list-group-item {
-    font-size: 10px;
-    font-family: 'ProximaNovaBold';
 
-}
-
-.list-group-item.active {
-    background-color: #741E3A;
-    border-color: #741E3A;
-}
 
 .dropdown-item:active {
     background-color: #741E3A;
